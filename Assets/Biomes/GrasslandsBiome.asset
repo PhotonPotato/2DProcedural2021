@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c78d47cc1f4e3641a809a837392d159, type: 3}
+  m_Name: GrasslandsBiome
+  m_EditorClassIdentifier: 
+  maxHeight: 300
+  oreGenerationDegree: 5
+  maxOreLineLength: 3
+  minOreLineLength: 0
+  biomeTopLayerID: 0
+  biomeBotLayerID: 1
+  biomeOreID: 02000000
+  maxTemp: 0.6
+  minTemp: 0.45
+  extremity: 40
+  pickingDegree: 0.01
+  topLayerMat: {fileID: 2100000, guid: 2afa642b3a7e47d4c82e119bfb05f957, type: 2}
+  stoneLayerMat: {fileID: 2100000, guid: 40daf2b9918db6c40b86a910edd5f368, type: 2}
+  oreLayerMat: {fileID: 2100000, guid: e907d1ecde735f04b8bc521be17b4ce5, type: 2}
+  biomeTrees:
+  - {fileID: 11400000, guid: baf9b6c9b4db60c459197020956b29ca, type: 2}
