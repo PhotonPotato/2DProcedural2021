@@ -290,8 +290,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightInnerRadius: 5.15
+  m_PointLightOuterRadius: 11.15
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -1361,7 +1361,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 92dd8aec5b22c6a4a84c27e65ffa800c, type: 2}
   - {fileID: 11400000, guid: b5abfc9a5a0b5a146aba5fae3914fb80, type: 2}
   caveNoisePickingDegree: 0.05
-  caveNoiseStep: 0.6
+  caveNoiseStepUpperBound: 0.6
+  caveNoiseStepLowerBound: 0.4
   meshBiomePickingDegree: 0.01
   meshWidth: 400
   meshHeight: 800

@@ -42,7 +42,8 @@ public class WorldGenerator : MonoBehaviour
 
     //Cave vars
     public float caveNoisePickingDegree = .3f;
-    public float caveNoiseStep = .5f;
+    public float caveNoiseStepUpperBound = .5f;
+    public float caveNoiseStepLowerBound = .5f;
 
     //Ore Vars
     int numOreDeposits = 500;
@@ -622,7 +623,7 @@ public class WorldGenerator : MonoBehaviour
 
     public void GenerateCaves()
     {
-        CaveGenerator caveGen = new CaveGenerator(this.gameObject.GetComponent<WorldGenerator>(), 0, caveNoiseStep, Mathf.RoundToInt(UnityEngine.Random.Range(0, 1000000)), caveNoisePickingDegree);
+        CaveGenerator caveGen = new CaveGenerator(this.gameObject.GetComponent<WorldGenerator>(), 0, caveNoiseStepUpperBound, caveNoiseStepLowerBound, Mathf.RoundToInt(UnityEngine.Random.Range(0, 1000000)), caveNoisePickingDegree);
         caveGen.initGeneration();
     }
 

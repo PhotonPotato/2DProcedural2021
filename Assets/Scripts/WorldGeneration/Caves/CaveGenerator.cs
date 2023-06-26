@@ -7,17 +7,21 @@ public class CaveGenerator
 {
     WorldGenerator worldGen;
     int numCaves;
-    float noiseStep;
+    float noiseStepUpperBound;
+    float noiseStepLowerBound;
     int seed;
     float pickingDegree;
 
     bool[,] noiseStorage;
 
-    public CaveGenerator(WorldGenerator worldGen, int numCaves, float noiseStep, int seed, float pickingDegree)
+    public CaveGenerator(WorldGenerator worldGen, int numCaves, float noiseStepUpperBound, float noiseStepLowerBound, int seed, float pickingDegree)
     {
         this.worldGen = worldGen;
         this.numCaves = numCaves;
-        this.noiseStep = noiseStep;
+
+        this.noiseStepUpperBound = noiseStepUpperBound;
+        this.noiseStepLowerBound = noiseStepLowerBound;
+
         this.seed = seed;
         this.pickingDegree = pickingDegree;
 
@@ -39,7 +43,7 @@ public class CaveGenerator
                 float val = Mathf.PerlinNoise((x + seed) * pickingDegree, (y + seed) * pickingDegree);
 
                 //Cave = white, val == 1, true.
-                bool steppedVal = val > noiseStep;
+                bool steppedVal = noiseStepUpperBound > val && val > noiseStepLowerBound;
 
                 noiseStorage[x, y] = steppedVal;
             }
